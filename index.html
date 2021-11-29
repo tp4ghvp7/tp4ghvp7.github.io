@@ -4,15 +4,36 @@
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./css/styles.css">
+<link id="theme" rel="stylesheet" href="css/light.css">
+
+<script>
+  function toggleTheme() {
+      // Obtains an array of all <link>
+      // elements.
+      // Select your element using indexing.
+      var theme = document.getElementsByTagName('link')[0];
+
+      // Change the value of href attribute 
+      // to change the css sheet.
+      if (theme.getAttribute('href') == 'css/light.css') {
+          theme.setAttribute('href', 'css/dark.css');
+      } else {
+          theme.setAttribute('href', 'css/light.css');
+      }
+  }
+  function SweetTheme() {
+          theme.setAttribute('href', 'css/sweet.css');
+  
+  }
+</script>
 </head>
 <body>
 
-
 <header>
-  <h2>ha_potato</h2>
+  <h2>Jicheng Xu's Portfolio</h2>
 </header>
-
+<img src="img/idea.png" class="dark-mode" onclick='toggleTheme()'>
+<img src="img/glasses.png" class="sweet-mode" onclick='SweetTheme()'>
 <section>
   <nav>
     <ul>
@@ -24,7 +45,6 @@
   
   <article>
     <h1>How You Like That</h1>
-    <h2>Zzdream</h2>
     <p>
         Ha, how you like that?<br/>
 You gon' like that, that that that, that, that that that, that<br/>
